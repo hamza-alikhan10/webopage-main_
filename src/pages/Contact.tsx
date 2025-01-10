@@ -10,7 +10,7 @@ const Contact = () => {
         <div className="grid md:grid-cols-2 gap-12">
           {/* Contact Information Block */}
           <div className="bg-white/90 p-8 rounded-lg shadow-lg">
-            <h2 className="text-3xl font-semibold mb-8 text-gray-800">Get in Touch</h2>
+            <h2 className="text-3xl font-Montserrat mb-8 text-gray-800">Get in Touch</h2>
             <div className="space-y-6">
               <div className="flex items-center space-x-4">
                 <Mail className="h-6 w-6 text-gray-600" />
@@ -19,7 +19,6 @@ const Contact = () => {
                   <p className="text-gray-600">info@formforge.com</p>
                 </div>
               </div>
-              
               <div className="flex items-center space-x-4">
                 <Phone className="h-6 w-6 text-gray-600" />
                 <div>
@@ -27,27 +26,26 @@ const Contact = () => {
                   <p className="text-gray-600">+91 9650 020 485</p>
                 </div>
               </div>
-              
               <div className="flex items-center space-x-4">
                 <MapPin className="h-6 w-6 text-gray-600" />
                 <div>
                   <h3 className="text-lg font-medium text-gray-800">Location</h3>
-                  <p className="text-gray-600">Pillar no. 11-B, 372-73
-                  First Floor, MG Road</p>
-                  <p className="text-gray-600">
-Sultanpur, New Delhi</p>
+                  <p className="text-gray-600">Pillar no. 11-B, 372-73 First Floor, MG Road</p>
+                  <p className="text-gray-600">Sultanpur, New Delhi</p>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Message Form Block */}
-          <div className="bg-white/90 p-8 rounded-lg shadow-lg">
+          <div
+            className="block bg-[rgba(0,0,0,0.05)] p-[34px] rounded-lg shadow-lg border-box text-[15px] font-[300] leading-[28.8px] text-[rgb(39,39,39)] font-[Montserrat] antialiased isolate"
+            style={{ height: "428.333px", width: "780px" }}
+          >
             <div className="flex items-center space-x-3 mb-8">
               <MessageSquare className="h-6 w-6 text-gray-600" />
               <h2 className="text-3xl font-semibold text-gray-800">Send us a Message</h2>
             </div>
-            
             <form className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700">
@@ -59,7 +57,6 @@ Sultanpur, New Delhi</p>
                   className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                 />
               </div>
-              
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700">
                   Email
@@ -70,7 +67,6 @@ Sultanpur, New Delhi</p>
                   className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                 />
               </div>
-              
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700">
                   Message
@@ -81,7 +77,6 @@ Sultanpur, New Delhi</p>
                   className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                 ></textarea>
               </div>
-              
               <button
                 type="submit"
                 className="w-full bg-black text-white py-2 px-4 rounded-md hover:bg-gray-800 transition-colors duration-300"

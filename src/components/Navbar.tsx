@@ -1,16 +1,16 @@
 import { useState } from 'react';
 import { Menu } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import Footer from './ui/Footer';
+
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
 
   const navLinks = [
-    { name: 'PORTFOLIO', href: '/portfolio' },
-    { name: 'BIOGRAPHY', href: '/biography' },
-    { name: 'MAPS', href: '/#maps' },
+    { name: 'GALLERY', href: '/portfolio' },
+    { name: 'ABOUT', href: '/biography' },
+    { name: 'PRESS', href: '/#maps' },
     { name: 'CONTACT', href: '/contact' },
   ];
 
@@ -68,7 +68,7 @@ const Navbar = () => {
                 <button
                   key={link.name}
                   onClick={() => handleNavigation(link.href)}
-                  className="nav-link text-gray-500 hover:text-black px-4 py-2 text-[28px] tracking-[0.4px] font-normal leading-normal transition-all transform duration-300 ease-out"
+                  className="nav-link text-gray-500 hover:text-black px-4 py-2 text-[18px] tracking-[0.4px] font-normal leading-normal transition-all transform duration-300 ease-out"
                 >
                   {link.name}
                 </button>
@@ -109,8 +109,7 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* Footer Section */}
-      <Footer />
+      
     </div>
   );
 };

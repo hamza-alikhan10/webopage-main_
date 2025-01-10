@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import Footer from './ui/Footer';
 import Navbar from './Navbar';
+import Footer from './ui/Footer';
 
 interface ImageData {
   url: string;

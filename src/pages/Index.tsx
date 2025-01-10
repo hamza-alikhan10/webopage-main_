@@ -2,23 +2,15 @@ import { useState, useEffect } from "react";
 import { Linkedin, Instagram } from "lucide-react";
 
 const images = [
+  '/About-Us.png',
+  '/don1.webp',
+  '/don2.webp',
+  '/don3.webp',
+  '/don4.webp',
   '/sad_pose.jpg',
-  '/nandi_pune.jpg',
+  '/About-Us.png',
   '/sad_pose.jpg',
-  '/satyamv_jayte.jpg',
-  '/shivrj_maharaj.jpg',
-  '/shivrj_maharaj.jpg',
-  '/reception_tble.jpg',
-  '/nandi_pune.jpg',
-  '/reception_tble.jpg',
-  '/sitting_elevates.jpg',
-  '/ant_hill.jpg',
-  '/nandi_pune.jpg',
-  '/reception_tble.jpg',
-  '/reception_tble.jpg',
-  '/shivrj_maharaj.jpg',
-  '/sad_pose.jpg',
-  '/satyamv_jayte.jpg',
+  '/About-Us.png',
   "/Sap_soma.png"
 ];
 
@@ -62,7 +54,7 @@ const Index = () => {
           onClick={() => window.location.href = '/portfolio'}
           className="mt-8 border-2 border-white text-white cursor-pointer font-['futura-pt'] text-[14px] font-medium tracking-[2.8px] leading-[14px] px-[20px] py-[14px] uppercase transition-all duration-300 hover:bg-white hover:text-black"
         >
-          Portfolio
+          ENTER
         </button>
       </div>
 
