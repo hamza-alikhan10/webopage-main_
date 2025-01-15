@@ -48,9 +48,6 @@
 }
 
 @media (max-width: 767px) {
-  body {
-    padding: 0;
-  }
 }
 
 .fade-in {
@@ -67,3 +64,4 @@
     transform: translateY(0);
   }
 }
+

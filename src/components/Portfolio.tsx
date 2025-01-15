@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Navbar from './Navbar';
 import Footer from './ui/Footer';
-
+import '../App.css';
 interface ImageData {
   url: string;
   caption: string;
@@ -32,7 +32,7 @@ const Portfolio = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white p-10">
+    <div className="min-h-screen bg-white" id="Root-padding">
       <div className="max-w-9xl mx-auto">
         <Navbar />
         

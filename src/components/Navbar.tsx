@@ -9,8 +9,8 @@ const Navbar = () => {
 
   const navLinks = [
     { name: 'GALLERY', href: '/portfolio' },
-    { name: 'ABOUT', href: '/biography' },
-    { name: 'PRESS', href: '/#maps' },
+    { name: 'ABOUT', href: '/about' },
+    { name: 'PRESS', href: '/Press' },
     { name: 'CONTACT', href: '/contact' },
   ];
 
@@ -32,16 +32,17 @@ const Navbar = () => {
             <div className="mt-8 mb-4">
               <a
                 href="/"
-                className="text-[73px] uppercase tracking-[1px] text-black-800"
+
                 style={{
                   fontFamily: '"Josefin Sans", "Poppins"',
                   fontWeight: 400,
                   fontSize: '73px',
                   height: 'auto',
                   textTransform: 'uppercase',
-                  letterSpacing: '1px',
-                  lineHeight: '87.6px',
+                  // letterSpacing: '0.2px',
+                  // lineHeight: '87.6px',
                   textAlign: 'center',
+                  lineHeight: '1.2em' ,
                   textDecorationLine: 'none',
                   textDecorationStyle: 'solid',
                   textSizeAdjust: '100%',
@@ -68,7 +69,7 @@ const Navbar = () => {
                 <button
                   key={link.name}
                   onClick={() => handleNavigation(link.href)}
-                  className="nav-link text-gray-500 hover:text-black px-4 py-2 text-[18px] tracking-[0.4px] font-normal leading-normal transition-all transform duration-300 ease-out"
+                  className="nav-link text-gray-500 hover:text-black px-4 py-2 text-[21px] tracking-[0.4px] font-normal leading-normal transition-all transform duration-300 ease-out"
                 >
                   {link.name}
                 </button>

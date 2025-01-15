@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import BiographyPage from "./pages/BiographyPage";
 import PortfolioPage from "./pages/PortfolioPage";
 import Contact from "./pages/Contact";
+import Press from "./pages/Contact";
 
 const queryClient = new QueryClient();
 

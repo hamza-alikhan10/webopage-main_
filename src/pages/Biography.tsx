@@ -1,6 +1,7 @@
 import React from 'react';
-import Footer from './ui/Footer';
-import Navbar from './Navbar';
+import Footer from '../components/ui/Footer';
+import Navbar from '../components/Navbar';
+import BiographyPage from '@/pages/BiographyPage';
 
 interface BiographyProps {
   mainImage: string;
@@ -48,25 +49,7 @@ const Biography: React.FC<BiographyProps> = ({
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
   <div className="fade-in">
-          {splitTextIntoSentences(biography).map((sentence, index) => (
-            <p
-              key={index}
-              style={{
-                fontFamily: 'Montserrat, Poppins, sans-serif',
-                fontWeight: 300,
-                fontStyle: 'normal',
-                lineHeight: '1.8em',
-                fontSize: '16px',
-                textTransform: 'none',
-                textDecoration: 'none',
-                margin: '0 0 1em',
-                color: 'rgb(87, 87, 87)',
-              }}
-              className="text-left"
-            >
-              {sentence}
-            </p>
-          ))}
+          <BiographyPage/>
         </div>
 
         <div className="fade-in h-[500px]">

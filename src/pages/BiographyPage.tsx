@@ -1,4 +1,4 @@
-import Biography from "@/components/Biography";
+import Biography from "@/pages/Biography";
 import { useNavigate } from "react-router-dom";
 
 const BiographyPage = () => {
