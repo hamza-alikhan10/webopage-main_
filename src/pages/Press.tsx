@@ -20,54 +20,54 @@ import {
   const publications: Publication[] = [
     {
       name: "GoodHomes",
-      logo: "/press1.jpg",
+      logo: "/Good_Homes.png",
       link: "https://www.goodhomes.co.in/design-and-style/style-makers/in-conversation-with-artist-abhinav-goyal-6038.html",
     },
     {
       name: "Architectural Digest",
-      logo: "/placeholder.svg",
-      link: "https://www.architecturaldigest.com/article",
+      logo: "/Architectural_Digest.png",
+      link: "https://www.architecturaldigest.in/content/visual-arts-architect-art-installations/",
     },
     {
       name: "CEO Insights",
-      logo: "/placeholder.svg",
-      link: "https://www.ceoinsights.com/article",
+      logo: "/CEO_Insights.png",
+      link: "https://www.ceoinsightsindia.com/vendor/-abhinav-goyal-creating-disruptive-art-forms-based-on-the-principles-of-contemporary-asymmetric-design-philosophies--cid-6407.html",
     },
     {
-      name: "Design Weekly",
-      logo: "/placeholder.svg",
-      link: "https://www.designweekly.com/article",
+      name: "lovethatdesign",
+      logo: "/lovethatdesign.png",
+      link: "https://www.artforum.com/article", 
     },
     {
-      name: "Art Forum",
-      logo: "/placeholder.svg",
-      link: "https://www.artforum.com/article",
+      name: "Surfaces Reporter",
+      logo: "/Surfaces_Reporter.png",
+      link: "https://surfacesreporter.com/articles/102561/Brizo%20-%20Delta%20Faucet", 
     },
     {
-      name: "Creative Review",
-      logo: "/placeholder.svg",
-      link: "https://www.creativereview.com/article",
+      name: "the design collective",
+      logo: "/TDC.png",
+      link: "https://www.thedesigncollective.co.in/post/formforge-pavilion",
     },
     {
-      name: "Design Observer",
-      logo: "/placeholder.svg",
-      link: "https://www.designobserver.com/article",
+      name: "ID india design",
+      logo: "/ID.png",
+      link: "https://indiadesignid.com/id-exhibit/formforge/",  
     },
     {
-      name: "Dezeen",
-      logo: "/placeholder.svg",
+      name: "Rethinking The Fture",
+      logo: "/Rethinking_future.png",
       link: "https://www.dezeen.com/article",
     },
     {
-      name: "Wallpaper",
-      logo: "/placeholder.svg",
-      link: "https://www.wallpaper.com/article",
+      name: "Novatr",
+      logo: "/novatr.png",
+      link: "https://www.novatr.com/blog/10-respected-parametric-design-firms-in-india-to-look-out-for#7",
     },
-    {
-      name: "The Design Journal",
-      logo: "/placeholder.svg",
-      link: "https://www.thedesignjournal.com/article",
-    },
+    // {
+    //   name: "The Design Journal",
+    //   logo: "/placeholder.svg",
+    //   link: "https://www.thedesignjournal.com/article",
+    // },
   ];
   
   const Press = () => {
@@ -86,13 +86,15 @@ import {
                 rel="noopener noreferrer"
                 className="block transition-transform hover:scale-105"
               >
-                <Card className="aspect-square flex items-center justify-center p-6">
-                  <img
-                    src={pub.logo}
-                    alt={`${pub.name} logo`}
-                    className="max-w-full max-h-full object-contain"
-                  />
-                </Card>
+                <Card className="aspect-square flex items-center justify-center p-0 m-0 border-none">
+  <img
+    src={pub.logo}
+    alt={`${pub.name} logo`}
+    className="w-full h-full object-contain"
+  />
+</Card>
+
+
               </a>
             ))}
           </div>

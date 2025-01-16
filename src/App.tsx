@@ -7,7 +7,7 @@ import Index from "./pages/Index";
 import BiographyPage from "./pages/BiographyPage";
 import PortfolioPage from "./pages/PortfolioPage";
 import Contact from "./pages/Contact";
-import Press from "./pages/Contact";
+import Press from "./pages/Press";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +22,7 @@ const App = () => (
           <Route path="/biography" element={<BiographyPage />} />
           <Route path="/portfolio" element={<PortfolioPage />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/press" element={<Press />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
