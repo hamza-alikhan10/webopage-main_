@@ -77,7 +77,7 @@ import {
 <Navbar/>
         <div className="max-w-7xl mx-auto">
          
-          <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-5">
             {publications.slice(0, 10).map((pub, index) => (
               <a
                 key={index}
