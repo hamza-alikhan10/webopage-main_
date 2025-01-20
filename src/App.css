@@ -82,3 +82,13 @@ p {
     height: 100%;
     object-position: 50% 50%;
 }
+
+.masonry {
+  column-count: 3;
+  column-gap: 16px;
+}
+
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 16px;
+}

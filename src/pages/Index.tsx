@@ -1,15 +1,28 @@
 import { useState, useEffect } from "react";
-import { Linkedin, Instagram } from "lucide-react";
+import Footer from "@/components/ui/Footer";
+import '../App.css';
 
 const images = [
-  '/About-Us.png',
-  '/don1.webp',
   '/don2.webp',
+  '/VIGHNAHARTA.webp',
+  '/NANDI.webp',
+  '/Solemn-banner.webp',  
+  '/Arise_ Pushpanjali Farmhouse- Delhi.JPG',  
+  '/DIVE.webp',
+  '/urban.png',
+  '/BUDDHA.png',
   '/don3.webp',
   '/don4.webp',
-  '/sad_pose.jpg',
   '/About-Us.png',
-  '/sad_pose.jpg',
+  '/THE-GRAND-PIANO.png',
+  '/LA-BELLA.png',
+  '/SATYAMEV-JAYATE.png',
+  '/Twin-Spirits.jpeg',
+  '/oronoir.png',
+  '/don1.webp',
+  '/urban.png',
+  '/About-Us.png',
+  '/urban.png',
   '/About-Us.png',
   "/Sap_soma.png"
 ];
@@ -19,7 +32,7 @@ const Index = () => {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentImage((prev) => (prev + 1) % images.length); // Changes image every 3 seconds
+      setCurrentImage((prev) => (prev + 1) % images.length); // Changes image every 5 seconds
     }, 5000);
 
     return () => clearInterval(timer); // Cleanup timer
@@ -38,9 +51,9 @@ const Index = () => {
             backgroundImage: `url(${src})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-            transition: 'opacity 1s ease-in-out, transform 1s ease-in-out', // Add transition for zoom effect
-            opacity: currentImage === index ? 1 : 0, // Show active slide
-            transform: currentImage === index ? 'scale(1)' : 'scale(1.1)', // Zoom effect on active image
+            transition: 'opacity 1s ease-in-out, transform 1s ease-in-out',
+            opacity: currentImage === index ? 1 : 0,
+            transform: currentImage === index ? 'scale(1)' : 'scale(1.1)',
           }}
         />
       ))}
@@ -56,17 +69,12 @@ const Index = () => {
         >
           ENTER
         </button>
-      </div>
 
-      {/* Transparent Footer */}
-      <footer className="absolute bottom-0 left-0 w-full z-10 flex items-center justify-center gap-6 py-4">
-        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-white hover:opacity-75">
-          <Linkedin size={24} />
-        </a>
-        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white hover:opacity-75">
-          <Instagram size={24} />
-        </a>
-      </footer>
+        {/* Footer within the image */}
+        <div className="mt-16 w-full text-white text-center py-4 border-none m-0">
+  <Footer />
+</div>
+      </div>
     </div>
   );
 };

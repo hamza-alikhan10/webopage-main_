@@ -12,22 +12,28 @@ const Portfolio = () => {
 
   const images = [
     '/sad_pose.jpg',
+    '/butterfly.jpg', 
     '/nandi_pune.jpg',
+    '/ragging_stallions.jpg', 
+    '/swirl.jpg', 
+    '/Stallion.png', 
     '/sad_pose.jpg',
     '/satyamv_jayte.jpg',
-    '/shivrj_maharaj.jpg',
-    '/shivrj_maharaj.jpg',
-    '/reception_tble.jpg',
+    '/KPMG- Mumbai.jpeg',
+    '/F5_Hyderdbd_curos.jpeg',
+    '/wolf_mithila parkr.JPG',
+    '/ballerina.jpg',
     '/nandi_pune.jpg',
     '/reception_tble.jpg',
-    '/sitting_elevates.jpg',
+    '/KPMG- Mumbai.jpeg',
     '/ant_hill.jpg',
     '/nandi_pune.jpg',
     '/reception_tble.jpg',
-    '/reception_tble.jpg',
+    '/leaning man 2.jpg',
     '/shivrj_maharaj.jpg',
     '/sad_pose.jpg',
     '/satyamv_jayte.jpg',
+    '/reception_tble.jpg',
     '/shivrj_maharaj.jpg',
   ];
 
@@ -39,7 +45,7 @@ const Portfolio = () => {
         {/* Grid for images */}
         <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 gap-1">
           {images.map((image, index) => (
-            <div key={index} className="relative group fade-in">
+            <div key={index} className="relative group fade-in w-full h-5 pb-[140%] overflow-hidden">
               <div className="overflow-hidden shadow-lg">
                 <img
                   src={image}

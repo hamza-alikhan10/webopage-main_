@@ -1,10 +1,7 @@
-import { useState } from 'react';
-import { Menu } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-
+import '../App.css';
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
 
   const navLinks = [
@@ -20,7 +17,6 @@ const Navbar = () => {
     } else {
       window.location.href = href;
     }
-    setIsMenuOpen(false);
   };
 
   return (
@@ -29,47 +25,27 @@ const Navbar = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col items-center space-y-3">
             {/* Logo */}
-            <div className="mt-8 mb-4">
+            <div className="mt-8 mb-4 flex justify-center">
               <a
                 href="/"
-
+                className="text-center text-5xl md:text-6xl lg:text-7xl font-light uppercase"
                 style={{
-                  fontFamily: '"Josefin Sans", "Poppins"',
-                  fontWeight: 400,
-                  fontSize: '73px',
-                  height: 'auto',
-                  textTransform: 'uppercase',
-                  // letterSpacing: '0.2px',
-                  // lineHeight: '87.6px',
-                  textAlign: 'center',
-                  lineHeight: '1.2em' ,
+                  fontFamily: '"Josefin Sans", "Poppins", sans-serif',
                   textDecorationLine: 'none',
-                  textDecorationStyle: 'solid',
-                  textSizeAdjust: '100%',
-                  width: 'auto',
+                  lineHeight: '1.2',
                 }}
               >
                 FORMFORGE
               </a>
             </div>
 
-            {/* Mobile menu button */}
-            <div className="md:hidden absolute right-4 top-4">
-              <button
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="inline-flex items-center justify-center p-2 rounded-md text-black-800 hover:text-gray-600 focus:outline-none"
-              >
-                <Menu className="h-6 w-6" />
-              </button>
-            </div>
-
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center justify-center mt-6" id="topNav">
+            {/* Navigation (Visible on all devices) */}
+            <div className="flex items-center justify-center mt-6" id="topNav">
               {navLinks.map((link) => (
                 <button
                   key={link.name}
                   onClick={() => handleNavigation(link.href)}
-                  className="nav-link text-gray-500 hover:text-black px-4 py-2 text-[21px] tracking-[0.4px] font-normal leading-normal transition-all transform duration-300 ease-out"
+                  className="nav-link text-gray-500 hover:text-black px-4 py-2 text-[26px] tracking-[0.4px] font-normal leading-normal transition-all transform duration-300 ease-out"
                 >
                   {link.name}
                 </button>
@@ -89,28 +65,9 @@ const Navbar = () => {
                 color: black;
               }
             `}</style>
-
-            {/* Mobile Navigation */}
-            {isMenuOpen && (
-              <div className="md:hidden w-full">
-                <div className="px-2 pt-2 pb-3 space-y-1 bg-white/95">
-                  {navLinks.map((link) => (
-                    <button
-                      key={link.name}
-                      onClick={() => handleNavigation(link.href)}
-                      className="w-full text-gray-800 hover:text-gray-600 block px-3 py-2 text-base tracking-widest text-center"
-                    >
-                      {link.name}
-                    </button>
-                  ))}
-                </div>
-              </div>
-            )}
           </div>
         </div>
       </nav>
-
-      
     </div>
   );
 };
