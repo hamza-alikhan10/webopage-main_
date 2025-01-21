@@ -29,7 +29,7 @@ const Index = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentImage((prev) => (prev + 1) % images.length);
-    }, 5000);
+    }, 6000);
 
     return () => clearInterval(timer);
   }, []);

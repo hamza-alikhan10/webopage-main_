@@ -3,40 +3,51 @@ import Navbar from './Navbar';
 import Footer from './ui/Footer';
 import '../App.css';
 
-interface ImageData {
-  url: string;
-  caption: string;
-}
-
 const Portfolio = () => {
-  const [selectedImage, setSelectedImage] = useState<ImageData | null>(null);
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
   const images = [
-    { url: '/sad_pose.jpg', caption: 'Sad Pose' },
-    { url: '/butterfly.jpg', caption: 'Butterfly' },
-    { url: '/nandi_pune.jpg', caption: 'Nandi Pune' },
-    { url: '/ragging_stallions.jpg', caption: 'Raging Stallions' },
-    { url: '/swirl.jpg', caption: 'Swirl' },
-    { url: '/Stallion.png', caption: 'Stallion' },
-    { url: '/sad_pose.jpg', caption: 'Another Sad Pose' },
-    { url: '/satyamv_jayte.jpg', caption: 'Satyameva Jayate' },
-    { url: '/KPMG- Mumbai.jpeg', caption: 'KPMG Mumbai' },
-    { url: '/F5_Hyderdbd_curos.jpeg', caption: 'F5 Hyderabad' },
-    { url: '/wolf_mithila parkr.JPG', caption: 'Wolf at Mithila Park' },
-    { url: '/ballerina.jpg', caption: 'Ballerina' },
-    { url: '/nandi_pune.jpg', caption: 'Nandi in Pune Again' },
-    { url: '/reception_tble.jpg', caption: 'Reception Table' },
-    { url: '/KPMG- Mumbai.jpeg', caption: 'KPMG Office' },
-    { url: '/ant_hill.jpg', caption: 'Ant Hill' },
-    { url: '/nandi_pune.jpg', caption: 'Nandi Third View' },
-    { url: '/reception_tble.jpg', caption: 'Another Reception Table' },
-    { url: '/leaning man 2.jpg', caption: 'Leaning Man 2' },
-    { url: '/shivrj_maharaj.jpg', caption: 'Shivraj Maharaj' },
-    { url: '/sad_pose.jpg', caption: 'Sad Pose Redux' },
-    { url: '/satyamv_jayte.jpg', caption: 'Another Satyameva Jayate' },
-    { url: '/reception_tble.jpg', caption: 'Third Reception Table' },
-    { url: '/shivrj_maharaj.jpg', caption: 'Shivraj Maharaj Close-Up' },
+    '/sad_pose.jpg',
+    '/butterfly.jpg',
+    '/nandi_pune.jpg',
+    '/ragging_stallions.jpg',
+    '/swirl.jpg',
+    '/Stallion.png',
+    '/sad_pose.jpg',
+    '/satyamv_jayte.jpg',
+    '/KPMG- Mumbai.jpeg',
+    '/F5_Hyderdbd_curos.jpeg',
+    '/wolf_mithila parkr.JPG',
+    '/ballerina.jpg',
+    '/nandi_pune.jpg',
+    '/reception_tble.jpg',
+    '/KPMG- Mumbai.jpeg',
+    '/ant_hill.jpg',
+    '/nandi_pune.jpg',
+    '/reception_tble.jpg',
+    '/leaning man 2.jpg',
+    '/shivrj_maharaj.jpg',
+    '/sad_pose.jpg',
+    '/satyamv_jayte.jpg',
+    '/reception_tble.jpg',
+    '/shivrj_maharaj.jpg',
   ];
+
+  const openImage = (index: number) => setSelectedIndex(index);
+
+  const closeModal = () => setSelectedIndex(null);
+
+  const showNextImage = () => {
+    if (selectedIndex !== null) {
+      setSelectedIndex((selectedIndex + 1) % images.length);
+    }
+  };
+
+  const showPreviousImage = () => {
+    if (selectedIndex !== null) {
+      setSelectedIndex((selectedIndex - 1 + images.length) % images.length);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-white" id="Root-padding">
@@ -49,47 +60,45 @@ const Portfolio = () => {
             <div key={index} className="relative group fade-in w-full h-5 pb-[140%] overflow-hidden">
               <div className="overflow-hidden shadow-lg">
                 <img
-                  src={image.url}
+                  src={image}
                   alt={`Portfolio Image ${index + 1}`}
                   className="w-full h-full object-cover transition-all duration-300 group-hover:scale-110"
-                  onClick={() => setSelectedImage(image)}
+                  onClick={() => openImage(index)}
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
-                  <span
-                    className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                    style={{
-                      fontFamily: 'Poppins, sans-serif',
-                      fontWeight: 300,
-                      fontStyle: 'normal',
-                      lineHeight: '1.2em',
-                      fontSize: '19px',
-                      textTransform: 'none',
-                      textDecoration: 'none',
-                      textAlign: 'center',
-                      letterSpacing: '.06em',
-                      border:'10px'
-                    }}
-                  >
-                    {image.caption}
-                  </span>
-                </div>
               </div>
             </div>
           ))}
         </div>
 
         {/* Image Modal */}
-        {selectedImage && (
+        {selectedIndex !== null && (
           <div
-            className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4"
-            onClick={() => setSelectedImage(null)}
+            className="fixed inset-0 bg-white bg-opacity-90 flex items-center justify-center z-50 p-4"
           >
-            <div className="max-w-4xl w-full">
+            <button
+              className="absolute top-4 right-4 bg-black text-white p-2 rounded-md"
+              onClick={closeModal}
+            >
+              Back
+            </button>
+            <div className="max-w-4xl w-full flex items-center justify-center">
+              <button
+                className="absolute left-4 text-black bg-white p-2 rounded-full"
+                onClick={showPreviousImage}
+              >
+                &#8592;
+              </button>
               <img
-                src={selectedImage.url}
-                alt="Selected portfolio image"
-                className="w-full h-auto"
+                src={images[selectedIndex]}
+                alt={`Portfolio Image ${selectedIndex + 1}`}
+                className="w-auto h-auto max-h-screen max-w-full"
               />
+              <button
+                className="absolute right-4 text-black bg-white p-2 rounded-full"
+                onClick={showNextImage}
+              >
+                &#8594;
+              </button>
             </div>
           </div>
         )}
