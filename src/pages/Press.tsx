@@ -73,7 +73,7 @@ import {
   const Press = () => {
     return (
       
-      <section className="py-16 px-4 md:px-8">
+      <section className="py-16 px-4 md:px-8" id="Root-padding">
 <Navbar/>
         <div className="max-w-7xl mx-auto">
          

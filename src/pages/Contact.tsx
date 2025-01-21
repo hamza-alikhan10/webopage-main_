@@ -43,7 +43,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="relative w-full min-h-screen bg-beige">
+    <div className="relative w-full min-h-screen bg-beige" id="Root-padding">
       <Navbar/>
       
       {/* Contact Form Section */}

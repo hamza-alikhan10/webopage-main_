@@ -1,35 +1,97 @@
-import { Instagram, Facebook, Linkedin, MessageCircle } from "lucide-react";
+import { FaWhatsapp, FaInstagram, FaFacebook, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   const socialLinks = [
-    { 
-      icon: MessageCircle, 
+    {
+      icon: FaWhatsapp,
       href: "https://wa.me/919876543210",
       label: "WhatsApp",
-      className: "text-black hover:text-gray-900"
     },
-    { icon: Instagram, href: "https://www.instagram.com/formforge/", label: "Instagram" },
-    { icon: Facebook, href: "https://www.instagram.com/formforge/", label: "Facebook" },
-    { icon: Linkedin, href: "https://www.instagram.com/formforge/", label: "LinkedIn" },
+    {
+      icon: FaInstagram,
+      href: "https://www.instagram.com/formforge/",
+      label: "Instagram",
+    },
+    {
+      icon: FaFacebook,
+      href: "https://www.facebook.com/formforge/",
+      label: "Facebook",
+    },
+    {
+      icon: FaLinkedin,
+      href: "https://www.linkedin.com/company/formforge/",
+      label: "LinkedIn",
+    },
   ];
 
   return (
-    <footer className="bg-transparent py-8 border-t border-gray-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-center space-x-6">
-          {socialLinks.map(({ icon: Icon, href, label, className }) => (
-            <a
-              key={label}
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`text-black hover:text-gray-900 transition-colors duration-300 ${className || ''}`}
-              aria-label={label}
-            >
-              <Icon className={`h-6 w-6 ${className ? '' : 'text-black'}`} />
-            </a>
-          ))}
-        </div>
+    <footer className="bg-transparent py-8">
+      <style>
+        {`
+          .footer-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 25px;
+          }
+
+          .footer-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 20px; /* Background width */
+            height: 20px; /* Background height */
+            background-color: black; /* Black background */
+            border-radius: 10px; /* Rounded corners */
+            color: white; /* Icon color */
+            font-size: 1.8rem; /* Icon size */
+            transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+            cursor: pointer;
+          }
+
+          .footer-icon:hover {
+            transform: scale(1.1); /* Scale on hover */
+            background-color:rgb(86, 84, 81); /* Gold background on hover */
+            color: white; /* Keep icon color white on hover */
+          }
+
+          @media (min-width: 480px) {
+            .footer-icon {
+              width: 70px; /* Larger background for medium screens */
+              height: 70px;
+              font-size: 2rem; /* Larger icon size */
+            }
+          }
+
+          @media (min-width: 768px) {
+            .footer-icon {
+              width: 80px; /* Larger background for larger screens */
+              height: 80px;
+              font-size: 2.2rem;
+            }
+
+            .footer-container {
+              gap: 30px; /* Increase spacing on larger screens */
+            }
+          }
+        `}
+      </style>
+
+      <div className="footer-container">
+        {socialLinks.map(({ icon: Icon, href, label }) => (
+          <a
+            key={label}
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={label}
+            className="footer-icon"
+          >
+            <Icon />
+          </a>
+        ))}
       </div>
     </footer>
   );

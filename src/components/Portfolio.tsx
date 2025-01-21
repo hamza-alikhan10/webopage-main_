@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Navbar from './Navbar';
 import Footer from './ui/Footer';
 import '../App.css';
+
 interface ImageData {
   url: string;
   caption: string;
