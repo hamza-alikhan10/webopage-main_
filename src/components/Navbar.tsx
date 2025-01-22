@@ -56,7 +56,7 @@ const Navbar = () => {
             <style>{`
               #topNav {
                 text-align: center;
-                margin-bottom:20px;
+                margin-bottom:50px;
               }
               .nav-link {
                 transition: transform 0.3s ease-out, scale 0.2s ease-out, color 0.3s ease;
