@@ -9,28 +9,47 @@ const Portfolio = () => {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
   const images = [
+    // 1
+    "/passi_butterfly.png", 
+    "/port-horses.png", 
+    "/Diya_mirza.png", 
+
     "/sad_pose.jpg",
+"/caterpillr.JPG",
+"/Camel-1.jpg",
+ // 2
+    "/Bust of man-1.jpg",
+    "/PANTHERA.jpeg",
+    "/Falcon.jpg",
+ // 3
+    "/sad_pose.jpg",
+    "/Performer-2.png",
+    
+   // 4
+   "/port-david.png",
+    "/Tata.png",
+    "/Stallion.png",
+ // 5
+    "/Sitting_figuree.jpg",
+    "/Sitting_figure.jpg",
     "/butterfly.jpg",
-    "/nandi_pune.jpg",
+     // 6
     "/ragging_stallions.jpg",
     "/swirl.jpg",
     "/Stallion.png",
+ // 7
     "/sad_pose.jpg",
-    "/satyamv_jayte.jpg",
     "/KPMG- Mumbai.jpeg",
     "/F5_Hyderdbd_curos.jpeg",
+     // 8
     "/wolf_mithila parkr.JPG",
     "/ballerina.jpg",
-    "/nandi_pune.jpg",
-    "/reception_tble.jpg",
+    "/DAVID-2.png",
+ // 9
     "/KPMG- Mumbai.jpeg",
     "/ant_hill.jpg",
-    "/nandi_pune.jpg",
-    "/reception_tble.jpg",
     "/leaning man 2.jpg",
-    "/shivrj_maharaj.jpg",
-    "/sad_pose.jpg",
-    "/satyamv_jayte.jpg",
+     // 10
     "/reception_tble.jpg",
     "/shivrj_maharaj.jpg",
   ];
@@ -55,7 +74,7 @@ const Portfolio = () => {
           {images.map((image, index) => (
             <div
               key={index}
-              className="relative group fade-in w-full h-5 pb-[140%] overflow-hidden"
+              className="relative group fade-in w-full h-5 pb-[133%] overflow-hidden"
             >
               <div className="overflow-hidden shadow-lg">
                 <img
