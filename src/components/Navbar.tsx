@@ -23,17 +23,19 @@ const Navbar = () => {
     <div>
       <nav className="bg-transparent py-4 transition-all duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col items-center space-y-3">
+          <div className="flex flex-col items-center space-y-4">
+            
             {/* Logo */}
             <div className="flex justify-center">
               <a
                 href="/"
                 className="text-center text-5xl md:text-6xl lg:text-7xl font-light uppercase"
                 style={{
-                  fontFamily: '"Josefin Sans", "Poppins", "Montserrat"',
+                  fontFamily: ' "Poppins", "Montserrat"',
                   textDecorationLine: "none",
-                  fontSize: "76px",
+                  fontSize: "43px",
                   lineHeight: "1.2",
+                  letterSpacing: "0.2em", // Adds spacing between letters
                 }}
               >
                 FORMFORGE
@@ -56,7 +58,7 @@ const Navbar = () => {
             <style>{`
               #topNav {
                 text-align: center;
-                margin-bottom:50px;
+                
               }
               .nav-link {
                 transition: transform 0.3s ease-out, scale 0.2s ease-out, color 0.3s ease;
@@ -66,11 +68,13 @@ const Navbar = () => {
                 scale: 1.1;
                 color: black;
               }
-              /* Responsive Adjustments */
+              /* Responsive Adjustments for font size nav tabs*/
               @media (max-width: 768px) {
                 .nav-link {
-                  font-size: 18px; /* Smaller font size on mobile */
-                  padding: 6px 12px;
+                  font-size: 15px; /* Smaller font size on mobile */
+                  padding: 1px 12px;
+                   letter-spacing: 0.10em; /* Adds spacing between letters */
+
                 }
 
                 .text-5xl {

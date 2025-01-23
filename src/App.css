@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Century+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
 /* Global styles */
 body {
   font-family: 'Montserrat', sans-serif;
@@ -83,12 +88,44 @@ p {
     object-position: 50% 50%;
 }
 
-.masonry {
-  column-count: 3;
-  column-gap: 16px;
+/* Container for header */
+.header-container {
+  display: flex;
+  margin-bottom: 6px;
+  justify-content: space-between; /* Spread items horizontally */
+  align-items: flex-start; /* Prevent vertical centering */
+  padding: 0 5rem; /* Default padding for small devices */
+  color: rgba(0, 0, 0, 0.655); /* Light black font color */
 }
 
-.masonry-item {
-  break-inside: avoid;
-  margin-bottom: 16px;
+/* Header items */
+.header-item {
+  font-size: 0.8rem;
+  font-weight: 100; /* Thin font */
+  transition: color 0.3s ease; /* Smooth color transition */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for header items */
+.header-item:hover {
+  color: rgb(0, 0, 0); /* Light gray on hover */
+  text-decoration: underline;
+}
+.underline {
+  text-decoration: underline;
+}
+
+/* Tablet devices (768px and above) */
+@media (min-width: 768px) {
+  .header-container {
+    padding: 0 2rem; /* Increase horizontal padding */
+  }
+}
+
+/* Large devices (1024px and above) */
+@media (min-width: 1024px) {
+  .header-container {
+    padding: 0 20rem; /* Increase padding for larger screens */
+  }
 }

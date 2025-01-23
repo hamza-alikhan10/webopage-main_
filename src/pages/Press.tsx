@@ -24,6 +24,11 @@ import {
       link: "https://www.goodhomes.co.in/design-and-style/style-makers/in-conversation-with-artist-abhinav-goyal-6038.html",
     },
     {
+      name: "Shalini Passi",
+      logo: "/passi.png",
+      link: "https://www.architecturaldigest.in/content/visual-arts-architect-art-installations/",
+    },
+    {
       name: "Architectural Digest",
       logo: "/Architectural_Digest.png",
       link: "https://www.architecturaldigest.in/content/visual-arts-architect-art-installations/",
