@@ -21,85 +21,53 @@ const Navbar = () => {
 
   return (
     <div>
-      <nav className="bg-transparent py-4 transition-all duration-300">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col items-center space-y-4">
-            
-            {/* Logo */}
-            <div className="flex justify-center">
-              <a
-                href="/"
-                className="text-center text-5xl md:text-6xl lg:text-7xl font-light uppercase"
-                style={{
-                  fontFamily: ' "Poppins", "Montserrat"',
-                  textDecorationLine: "none",
-                  fontSize: "43px",
-                  lineHeight: "1.2",
-                  letterSpacing: "0.2em", // Adds spacing between letters
-                }}
+      <nav className="bg-transparent py-4">
+        <div className="max-w-7xl mx-auto px-4 flex flex-col items-center">
+          
+          {/* Logo */}
+          <a
+            href="/"
+            className="text-center text-5xl font-light uppercase"
+            style={{
+              fontFamily: '"Poppins", "Montserrat"',
+              textDecorationLine: "none",
+              letterSpacing: "0.2em", // Adds spacing between letters
+              lineHeight: "1.2",
+            }}
+          >
+            FORMFORGE
+          </a>
+
+          {/* Navigation */}
+          <div className="flex flex-wrap justify-center gap-6 mt-6">
+            {navLinks.map((link) => (
+              <button
+                key={link.name}
+                onClick={() => handleNavigation(link.href)}
+                className="nav-link text-gray-500 hover:text-black text-lg tracking-wide transition-all duration-300"
               >
-                FORMFORGE
-              </a>
-            </div>
-
-            {/* Navigation (Visible on all devices) */}
-            <div className="flex items-center justify-center mt-6" id="topNav">
-              {navLinks.map((link) => (
-                <button
-                  key={link.name}
-                  onClick={() => handleNavigation(link.href)}
-                  className="nav-link text-gray-500 hover:text-black px-4 py-2 text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] tracking-wide font-normal leading-normal transition-all duration-300 ease-out"
-                >
-                  {link.name}
-                </button>
-              ))}
-            </div>
-
-            <style>{`
-              #topNav {
-                text-align: center;
-                
-              }
-              .nav-link {
-                transition: transform 0.3s ease-out, scale 0.2s ease-out, color 0.3s ease;
-              }
-              .nav-link:hover {
-                transform: translateY(-3px);
-                scale: 1.1;
-                color: black;
-              }
-              /* Responsive Adjustments for font size nav tabs*/
-              @media (max-width: 768px) {
-                .nav-link {
-                  font-size: 15px; /* Smaller font size on mobile */
-                  padding: 1px 12px;
-                   letter-spacing: 0.10em; /* Adds spacing between letters */
-
-                }
-
-                .text-5xl {
-                  font-size: 3rem; /* Logo scales down on mobile */
-                }
-              }
-
-              @media (min-width: 768px) {
-                .nav-link {
-                  font-size: 22px;
-                }
-
-                .text-5xl {
-                  font-size: 4rem;
-                }
-              }
-
-              @media (min-width: 1024px) {
-                .nav-link {
-                  font-size: 26px;
-                }
-              }
-            `}</style>
+                {link.name}
+              </button>
+            ))}
           </div>
         </div>
+
+        <style>{`
+          .nav-link {
+            transition: transform 0.3s ease, color 0.3s ease;
+          }
+          .nav-link:hover {
+            transform: translateY(-3px);
+            color: black;
+          }
+
+          /* Uniform font size and spacing adjustments */
+          @media (max-width: 768px) {
+            .text-4xl {
+              font-size: 2.5rem; /* Scale down logo for small devices */
+            }
+          }
+        `}</style>
       </nav>
     </div>
   );

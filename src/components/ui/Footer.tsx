@@ -33,60 +33,28 @@ const Footer = () => {
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
-            gap: 20px; /* Spacing between icons */
-            padding: 0 1rem; /* Add horizontal padding for small screens */
+            gap: 20px; /* Consistent spacing between icons */
+            padding: 0 1rem;
           }
 
           .footer-icon {
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 60px;
-            height: 60px;
-            background-color: black; /* Black background */
-            border-radius: 50%; /* Fully rounded icons */
-            color: white; /* Icon color */
-            font-size: 1.6rem; /* Default icon size */
+            width: 40px; /* Fixed size for all devices */
+            height: 40px;
+            background-color: black;
+            border-radius: 20%;
+            color: white;
+            font-size: 1rem;
             transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
             cursor: pointer;
           }
 
           .footer-icon:hover {
-            transform: scale(1.1); /* Slight zoom on hover */
-            background-color: rgb(86, 84, 81); /* Change background color on hover */
-            color: white; /* Keep icon color white on hover */
-          }
-
-          @media (min-width: 480px) {
-            .footer-icon {
-              width: 70px; /* Increase size on medium devices */
-              height: 70px;
-              font-size: 2rem;
-            }
-          }
-
-          @media (min-width: 768px) {
-            .footer-icon {
-              width: 80px; /* Larger icons for larger devices */
-              height: 80px;
-              font-size: 2.2rem;
-            }
-
-            
-          
-
-          @media (min-width: 1024px) {
-            .footer-icon {
-              width: 80px; /* Even larger icons for desktops */
-              height: 80px;
-              font-size: 2.5rem;
-              margin-top:30px;
-            }
-
-            .footer-container {
-              gap: 40px; /* Increase spacing further on desktops */
-              margin-top:30px;
-            }
+            transform: scale(1.1); /* Slight zoom effect */
+            background-color: rgb(86, 84, 81);
+            color: white;
           }
         `}
       </style>
