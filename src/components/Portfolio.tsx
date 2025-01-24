@@ -150,7 +150,7 @@ const Portfolio = () => {
                 showFullscreenButton={false}
                 showPlayButton={false}
                 useTranslate3D={false}
-                showThumbnails={false}
+                showThumbnails={true}
                 onSlide={(currentIndex) => setSelectedIndex(currentIndex)}
               />
             </div>
