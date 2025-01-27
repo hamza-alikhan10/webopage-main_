@@ -27,7 +27,7 @@ const Navbar = () => {
           {/* Logo */}
           <a
             href="/"
-            className="text-center text-5xl font-light uppercase"
+            className="text-center text-7xl font-light uppercase"
             style={{
               fontFamily: '"Poppins", "Montserrat"',
               textDecorationLine: "none",
@@ -39,12 +39,12 @@ const Navbar = () => {
           </a>
 
           {/* Navigation */}
-          <div className="flex flex-wrap justify-center gap-6 mt-6">
+          <div className="flex flex-wrap justify-center gap-12 mt-2 mb-11">
             {navLinks.map((link) => (
               <button
                 key={link.name}
                 onClick={() => handleNavigation(link.href)}
-                className="nav-link text-gray-500 hover:text-black text-lg tracking-wide transition-all duration-300"
+                className="nav-link text-gray-500 hover:text-black text-xl tracking-wide transition-colors duration-300"
               >
                 {link.name}
               </button>
@@ -54,11 +54,10 @@ const Navbar = () => {
 
         <style>{`
           .nav-link {
-            transition: transform 0.3s ease, color 0.3s ease;
+            transition: color 0.3s ease; /* Only transition color */
           }
           .nav-link:hover {
-            transform: translateY(-3px);
-            color: black;
+            color: black; /* Turn black on hover */
           }
 
           /* Uniform font size and spacing adjustments */
