@@ -2,25 +2,13 @@ import { useState, useEffect } from "react";
 import { FaWhatsapp, FaInstagram, FaFacebook, FaLinkedin } from "react-icons/fa";
 
 const images = [
-  "/don2.webp",
-  "/VIGHNAHARTA.webp",
-  "/NANDI.webp",
-  "/Solemn-banner.webp",
-  "/DIVE.webp",
-  "/urban.png",
-  "/BUDDHA.png",
-  "/don3.webp",
-  "/urban.png",
-  "/don4.webp",
-  "/About-Us.png",
-  "/THE-GRAND-PIANO.png",
-  "/LA-BELLA.png",
-  "/SATYAMEV-JAYATE.png",
-  "/Twin-Spirits.jpeg",
-  "/oronoir.png",
-  "/don1.webp",
-  "/urban.png",
-  "/About-Us.png",
+  
+  "/H-L-1.jpg",
+  "/H-L-2.jpg",
+  "/H-L-3.jpg",
+  "/H-L-4.jpg",
+  "/H-L-5.jpg",
+  "/H-L-6.jpg",
 ];
 
 const Index = () => {

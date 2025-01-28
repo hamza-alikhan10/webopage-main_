@@ -11,7 +11,7 @@ const Navbar = () => {
     { name: "CONTACT", href: "/contact" },
   ];
 
-  const handleNavigation = (href: string) => {
+  const handleNavigation = (href) => {
     if (href.startsWith("/")) {
       navigate(href);
     } else {
@@ -23,15 +23,14 @@ const Navbar = () => {
     <div>
       <nav className="bg-transparent py-4">
         <div className="max-w-7xl mx-auto px-4 flex flex-col items-center">
-          
           {/* Logo */}
           <a
             href="/"
-            className="text-center text-7xl font-light uppercase"
+            className="text-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light uppercase"
             style={{
               fontFamily: '"Poppins", "Montserrat"',
               textDecorationLine: "none",
-              letterSpacing: "0.2em", // Adds spacing between letters
+              letterSpacing: "0.2em",
               lineHeight: "1.2",
             }}
           >
@@ -39,12 +38,12 @@ const Navbar = () => {
           </a>
 
           {/* Navigation */}
-          <div className="flex flex-wrap justify-center gap-12 mt-2 mb-11">
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8 mt-4 mb-8 sm:mb-11">
             {navLinks.map((link) => (
               <button
                 key={link.name}
                 onClick={() => handleNavigation(link.href)}
-                className="nav-link text-gray-500 hover:text-black text-xl tracking-wide transition-colors duration-300"
+                className="nav-link text-gray-500 hover:text-black text-base sm:text-lg md:text-xl tracking-wide transition-colors duration-300"
               >
                 {link.name}
               </button>
@@ -54,16 +53,18 @@ const Navbar = () => {
 
         <style>{`
           .nav-link {
-            transition: color 0.3s ease; /* Only transition color */
+            transition: color 0.3s ease;
           }
           .nav-link:hover {
-            color: black; /* Turn black on hover */
+            color: black;
           }
 
-          /* Uniform font size and spacing adjustments */
-          @media (max-width: 768px) {
+          @media (max-width: 640px) {
             .text-4xl {
-              font-size: 2.5rem; /* Scale down logo for small devices */
+              font-size: 2rem; /* Smaller logo for mobile */
+            }
+            .nav-link {
+              font-size: 0.875rem; /* Smaller text for mobile */
             }
           }
         `}</style>

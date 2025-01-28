@@ -10,54 +10,54 @@ const Portfolio = () => {
 
   // Gallery images
   const images = [
-    { src: "/1.png", caption: "Sculpture 1", modalCaption: "Full View of Sculpture 1" },
-    { src: "/2.png", caption: "Sculpture 2", modalCaption: "Full View of Sculpture 2" },
-    { src: "/3.png", caption: "Sculpture 3", modalCaption: "Full View of Sculpture 3" },
-    { src: "/4.png", caption: "Sculpture 4", modalCaption: "Full View of Sculpture 4" },
-    { src: "/5.png", caption: "Sculpture 5", modalCaption: "Full View of Sculpture 5" },
-    { src: "/6.png", caption: "Sculpture 6", modalCaption: "Full View of Sculpture 6" },
-    { src: "/4 -Copy.png", caption: "Sculpture 7", modalCaption: "Full View of Sculpture 7" },
-    { src: "/8.png", caption: "Sculpture 8", modalCaption: "Full View of Sculpture 8" },
-    { src: "/9.png", caption: "Sculpture 9", modalCaption: "Full View of Sculpture 9" },
-    { src: "/10.png", caption: "Sculpture 10", modalCaption: "Full View of Sculpture 10" },
-    { src: "/11.png", caption: "Sculpture 11", modalCaption: "Full View of Sculpture 11" },
-    { src: "/12.png", caption: "Sculpture 12", modalCaption: "Full View of Sculpture 12" },
-    { src: "/13.png", caption: "Sculpture 13", modalCaption: "Full View of Sculpture 13" },
-    { src: "/14.png", caption: "Sculpture 14", modalCaption: "Full View of Sculpture 14" },
-    { src: "/15.png", caption: "Sculpture 15", modalCaption: "Full View of Sculpture 15" },
-    { src: "/16.png", caption: "Sculpture 16", modalCaption: "Full View of Sculpture 16" },
-    { src: "/17.png", caption: "Sculpture 17", modalCaption: "Full View of Sculpture 17" },
-    { src: "/18.png", caption: "Sculpture 18", modalCaption: "Full View of Sculpture 18" },
-    { src: "/19.png", caption: "Sculpture 19", modalCaption: "Full View of Sculpture 19" },
-    { src: "/20.png", caption: "Sculpture 20", modalCaption: "Full View of Sculpture 20" },
-    { src: "/21.png", caption: "Sculpture 21", modalCaption: "Full View of Sculpture 21" },
-    { src: "/22.png", caption: "Sculpture 22", modalCaption: "Full View of Sculpture 22" },
-    { src: "/23.png", caption: "Sculpture 23", modalCaption: "Full View of Sculpture 23" },
-    { src: "/24.png", caption: "Sculpture 24", modalCaption: "Full View of Sculpture 24" },
-    { src: "/25.png", caption: "Sculpture 25", modalCaption: "Full View of Sculpture 25" },
-    { src: "/26.png", caption: "Sculpture 26", modalCaption: "Full View of Sculpture 26" },
-    { src: "/27.png", caption: "Sculpture 27", modalCaption: "Full View of Sculpture 27" },
-    { src: "/28.png", caption: "Sculpture 28", modalCaption: "Full View of Sculpture 28" },
-    { src: "/29.png", caption: "Sculpture 29", modalCaption: "Full View of Sculpture 29" },
-    { src: "/30.png", caption: "Sculpture 30", modalCaption: "Full View of Sculpture 30" },
-    { src: "/31.png", caption: "Sculpture 31", modalCaption: "Full View of Sculpture 31" },
-    { src: "/32.png", caption: "Sculpture 32", modalCaption: "Full View of Sculpture 32" },
-    { src: "/33.png", caption: "Sculpture 33", modalCaption: "Full View of Sculpture 33" },
-    { src: "/34.png", caption: "Sculpture 34", modalCaption: "Full View of Sculpture 34" },
-    { src: "/35.png", caption: "Sculpture 35", modalCaption: "Full View of Sculpture 35" },
-    { src: "/36.png", caption: "Sculpture 36", modalCaption: "Full View of Sculpture 36" },
-    { src: "/37.png", caption: "Sculpture 37", modalCaption: "Full View of Sculpture 37" },
-    { src: "/38.png", caption: "Sculpture 38", modalCaption: "Full View of Sculpture 38" },
-    { src: "/39.png", caption: "Sculpture 39", modalCaption: "Full View of Sculpture 39" },
-     
+    { src: "/1.png", caption: <>Twin spirits<br />(Chennai), IND, 2024</> },
+    { src: "/2.png", caption: <>The Metamorphosis Muse,<br />(Hyderabad), IND, 2025</> },
+    { src: "/3.png", caption: <>Vighnaharta Anantam<br />(Mumbai), IND, 2024</> },
+    { src: "/4.png", caption: <>David<br />(Casamia UAE), 2024</> },
+    { src: "/5.png", caption: <>The Lotus Nouvel<br />(Pune), IND, 2024</> },
+    { src: "/6.png", caption: <>Mermaid | Oh’ll’nam<br />(Vadodara), IND, 2024</> },
+    { src: "/4 -Copy.png", caption: "Replace" },
+    { src: "/8.png", caption: <>The tree of life<br />(Delhi), IND, 2024</> },
+    { src: "/9.png", caption: <>Inverted Cactus<br />(Hyderabad), IND, 2024</> },
+    { src: "/10.png", caption: <>Sculptural totems<br />(Hyderabad), IND, 2024</> },
+    { src: "/11.png", caption: <>The Raging Stallions<br />(Chennai), IND, 2024</> },
+    { src: "/12.png", caption: <>The Wing Man<br />(Dubai), 2024</> },
+    { src: "/13.png", caption: <>The Sole Gaze<br />(Bangalore), IND, 2024</> },
+    { src: "/14.png", caption: <>The Leaning Man<br />(Hyderabad), IND, 2024</> },
+    { src: "/15.png", caption: <>The Meditating Lady<br />(Goa), IND, 2024</> },
+    { src: "/16.png", caption: <>Etherea<br />(Chennai), IND, 2024</> },
+    { src: "/17.png", caption: <>Bonsai<br />(Delhi), IND, 2024</> },
+    { src: "/18.png", caption: <>Nandi<br />(Pune), IND, 2024</> },
+    { src: "/19.png", caption: <>The Carefree Seat<br />(Hyderabad), IND, 2024</> },
+    { src: "/20.png", caption: <>Bloom<br />(Delhi), IND, 2024</> },
+    { src: "/21.png", caption: <>Reflective Pause<br />(Bangalore), IND, 2024</> },
+    { src: "/22.png", caption: <>Abstracta<br />(Delhi), IND, 2024</> },
+    { src: "/23.png", caption: <>Buddha<br />(Bangalore), IND, 2024</> },
+    { src: "/24.png", caption: "Repeat" },
+    { src: "/25.png", caption: <>Raging Bull<br />(Goa), IND, 2024</> },
+    { src: "/26.png", caption: "Repeat" },
+    { src: "/27.png", caption: <>Panthera<br />(Dubai), 2024</> },
+    { src: "/28.png", caption: <>Aphrodia<br />(Goa), IND, 2024</> },
+    { src: "/29.png", caption: <>Geomorph<br />(Hyderabad), IND, 2024</> },
+    { src: "/30.png", caption: <>Ballerina<br />(Gurugram), IND, 2024</> },
+    { src: "/31.png", caption: "Repeat" },
+    { src: "/32.png", caption: <>The Raging Stallion<br />(Hyderabad), IND, 2024</> },
+    { src: "/33.png", caption: <>Panthera<br />(Dubai), 2024</> },
+    { src: "/34.png", caption: <>The Wing Sculpture<br />(KPMG, Gurugram), IND, 2024</> },
+    { src: "/35.png", caption: <>The Sleeping Buddha<br />(Delhi), IND, 2024</> },
+    { src: "/36.png", caption: <>Skyward Bound<br />(Delhi), IND, 2024</> },
+    { src: "/37.png", caption: <>Seed<br />(Mumbai), IND, 2024</> },
+    { src: "/38.png", caption: "Repeat" },
+    { src: "/39.png", caption: <>Ganapati<br />(Dubai), 2024</> },
   ];
 
   // Convert the images array into the format required by react-image-gallery
   const galleryImages = images.map((image) => ({
     original: image.src,
     thumbnail: image.src,
-    description: image.caption, // Used by react-image-gallery for thumbnails
-    modalCaption: image.modalCaption, // Separate caption for the modal
+   caption: image.caption,
+    
+    
   }));
 
   const openImage = (index: number) => setSelectedIndex(index);
@@ -117,7 +117,7 @@ const Portfolio = () => {
 
               {/* Modal Caption */}
               <p className="text-center text-sm md:text-lg font-medium bg-gray-100 w-full p-2">
-                {galleryImages[selectedIndex]?.modalCaption}
+                {galleryImages[selectedIndex]?.caption}
               </p>
             </div>
           </div>
