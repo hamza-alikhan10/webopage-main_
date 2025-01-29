@@ -1,7 +1,7 @@
 import React from 'react';
 import Footer from './ui/Footer';
 import Navbar from './Navbar';
-import '../App.css'; 
+import '../App.css';
 
 interface BiographyProps {
   mainImage: string;
@@ -24,24 +24,18 @@ const Biography: React.FC<BiographyProps> = ({
   fourthImage,
   fourthStory,
 }) => {
-  const splitTextIntoSentences = (text: string) =>
-    text.split('. ').map((sentence) => sentence.trim() + (sentence.endsWith('.') ? '' : '.'));
-
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" id="Root-padding">
+    <div className="max-w-7xl mx-auto sm:px-6 lg:px-8 py-12" id="Root-padding">
       <Navbar />
 
       {/* Main Biography Section */}
       <h1
-        className="mb-8 fade-in text-left"
+        className=" fade-in text-left"
         style={{
           fontFamily: 'Montserrat',
           fontWeight: 200,
-          fontStyle: 'normal',
           lineHeight: '1.5em',
           fontSize: '2em',
-          textTransform: 'none',
-          textDecoration: 'none',
           letterSpacing: '.06em',
         }}
       >
@@ -50,39 +44,26 @@ const Biography: React.FC<BiographyProps> = ({
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
         <div className="fade-in">
-          {splitTextIntoSentences(biography).map((sentence, index) => (
-            <p
-              key={index}
-              style={{
-                fontFamily: 'Montserrat, Poppins, sans-serif',
-                fontWeight: 300,
-                fontStyle: 'normal',
-                lineHeight: '1.8em',
-                fontSize: '16px',
-                textTransform: 'none',
-                textDecoration: 'none',
-                margin: '0 0 1em',
-                color: 'rgb(87, 87, 87)',
-              }}
-              className="text-left"
-            >
-              {sentence}
-            </p>
-          ))}
+          <p
+            style={{
+              fontFamily: 'Montserrat, Poppins, sans-serif',
+              fontWeight: 300,
+              lineHeight: '1.6em',
+              fontSize: '16px',
+             
+              color: 'rgb(87, 87, 87)',
+            }}
+            className="text-left"
+          >
+            {biography}
+          </p>
         </div>
 
         <div className="fade-in h-[500px]">
           <img
             src={mainImage}
             alt="Artist with installation"
-            className="w-full h-full rounded-lg shadow-lg"
-            style={{
-              display: 'block',
-              objectFit: 'cover',
-              width: '100%',
-              height: '100%',
-              objectPosition: '50% 50%',
-            }}
+            className="w-full h-full rounded-lg shadow-lg object-cover"
             loading="lazy"
           />
         </div>
@@ -94,54 +75,38 @@ const Biography: React.FC<BiographyProps> = ({
           <img
             src={secondaryImage}
             alt="Art installation"
-            className="w-full h-full rounded-lg shadow-lg"
-            style={{
-              display: 'block',
-              objectFit: 'cover',
-              width: '100%',
-              height: '100%',
-              objectPosition: '50% 50%',
-            }}
+            className="w-full h-full rounded-lg shadow-lg object-cover"
             loading="lazy"
           />
         </div>
 
         <div className="fade-in order-1 md:order-2">
           <h1
-            className="mb-8 text-left"
+            className=" text-left"
             style={{
               fontFamily: 'Montserrat',
               fontWeight: 200,
-              fontStyle: 'normal',
               lineHeight: '1.5em',
               fontSize: '2em',
-              textTransform: 'none',
-              textDecoration: 'none',
               letterSpacing: '.06em',
             }}
           >
             ARTIST'S STORY
           </h1>
 
-          {splitTextIntoSentences(artistStory).map((sentence, index) => (
-            <p
-              key={index}
-              style={{
-                fontFamily: 'Montserrat, Poppins, sans-serif',
-                fontWeight: 300,
-                fontStyle: 'normal',
-                lineHeight: '1.8em',
-                fontSize: '16px',
-                textTransform: 'none',
-                textDecoration: 'none',
-                margin: '0 0 1em',
-                color: 'rgb(87, 87, 87)',
-              }}
-              className="text-left"
-            >
-              {sentence}
-            </p>
-          ))}
+          <p
+            style={{
+              fontFamily: 'Montserrat, Poppins, sans-serif',
+              fontWeight: 300,
+              lineHeight: '1.6em',
+              fontSize: '16px',
+             
+              color: 'rgb(87, 87, 87)',
+            }}
+            className="text-left"
+          >
+            {artistStory}
+          </p>
         </div>
       </div>
 
@@ -149,54 +114,38 @@ const Biography: React.FC<BiographyProps> = ({
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
         <div className="fade-in">
           <h1
-            className="mb-8 text-left"
+            className=" text-left"
             style={{
               fontFamily: 'Montserrat',
               fontWeight: 200,
-              fontStyle: 'normal',
               lineHeight: '1.5em',
               fontSize: '2em',
-              textTransform: 'none',
-              textDecoration: 'none',
               letterSpacing: '.06em',
             }}
           >
             STUDIO STATEMENT
           </h1>
 
-          {splitTextIntoSentences(thirdStory).map((sentence, index) => (
-            <p
-              key={index}
-              style={{
-                fontFamily: 'Montserrat, Poppins, sans-serif',
-                fontWeight: 300,
-                fontStyle: 'normal',
-                lineHeight: '1.8em',
-                fontSize: '16px',
-                textTransform: 'none',
-                textDecoration: 'none',
-                margin: '0 0 1em',
-                color: 'rgb(87, 87, 87)',
-              }}
-              className="text-left"
-            >
-              {sentence}
-            </p>
-          ))}
+          <p
+            style={{
+              fontFamily: 'Montserrat, Poppins, sans-serif',
+              fontWeight: 300,
+              lineHeight: '1.6em',
+              fontSize: '16px',
+              marginBottom: '0.5em',
+              color: 'rgb(87, 87, 87)',
+            }}
+            className="text-left"
+          >
+            {thirdStory}
+          </p>
         </div>
 
         <div className="fade-in h-[400px]">
           <img
             src={thirdImage}
             alt="Third art piece"
-            className="w-full h-full rounded-lg shadow-lg"
-            style={{
-              display: 'block',
-              objectFit: 'cover',
-              width: '100%',
-              height: '100%',
-              objectPosition: '50% 50%',
-            }}
+            className="w-full h-full rounded-lg shadow-lg object-cover"
             loading="lazy"
           />
         </div>
@@ -208,54 +157,38 @@ const Biography: React.FC<BiographyProps> = ({
           <img
             src={fourthImage}
             alt="Fourth art piece"
-            className="w-full h-full rounded-lg shadow-lg"
-            style={{
-              display: 'block',
-              objectFit: 'cover',
-              width: '100%',
-              height: '100%',
-              objectPosition: '50% 50%',
-            }}
+            className="w-full h-full rounded-lg shadow-lg object-cover"
             loading="lazy"
           />
         </div>
 
         <div className="fade-in order-1 md:order-2">
           <h1
-            className="mb-8 text-left"
+            className=" text-left"
             style={{
               fontFamily: 'Montserrat',
               fontWeight: 200,
-              fontStyle: 'normal',
               lineHeight: '1.5em',
               fontSize: '2em',
-              textTransform: 'none',
-              textDecoration: 'none',
               letterSpacing: '.06em',
             }}
           >
             OUR PRESENCE
           </h1>
 
-          {splitTextIntoSentences(fourthStory).map((sentence, index) => (
-            <p
-              key={index}
-              style={{
-                fontFamily: 'Montserrat, Poppins, sans-serif',
-                fontWeight: 300,
-                fontStyle: 'normal',
-                lineHeight: '1.8em',
-                fontSize: '16px',
-                textTransform: 'none',
-                textDecoration: 'none',
-                margin: '0 0 1em',
-                color: 'rgb(87, 87, 87)',
-              }}
-              className="text-left"
-            >
-              {sentence}
-            </p>
-          ))}
+          <p
+            style={{
+              fontFamily: 'Montserrat, Poppins, sans-serif',
+              fontWeight: 300,
+              lineHeight: '1.6em',
+              fontSize: '16px',
+              marginBottom: '0.5em',
+              color: 'rgb(87, 87, 87)',
+            }}
+            className="text-left"
+          >
+            {fourthStory}
+          </p>
         </div>
       </div>
 

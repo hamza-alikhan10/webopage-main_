@@ -40,10 +40,10 @@ const Contact = () => {
       <Navbar />
 
       {/* Contact Section */}
-      <div className="container mx-auto px-4 py-16 space-y-16">
+      <div className="container mx-auto px-4  ">
         {/* Contact Form */}
         <div className="bg-[#F5F5F5] border border-[#FDE1D3] px-[9%] py-[9%]">
-          <h2 className="text-lg mb-4 font-montserrat text-center">Connect with us to get started!</h2>
+          <h3 className="text-xl mb-10  font-montserrat text-center">Connect with us to get started!</h3>
           <form onSubmit={handleSubmit} className="flex flex-col gap-6 max-w-3xl mx-auto">
             <Input
               type="text"
@@ -80,7 +80,7 @@ const Contact = () => {
 
         {/* Contact Info */}
         <div className="bg-[#F5F5F5] border border-[#FDE1D3] px-[9%] py-[9%]">
-          <h2 className="text-lg mb-8 font-montserrat text-center">Luxury is just a phone call away!</h2>
+          <h3 className="text-xl mb-8 font-montserrat text-center">Luxury is just a phone call away!</h3>
           <div className="grid gap-8 md:grid-cols-2">
             {/* Contact Info */}
             <div className="space-y-6">

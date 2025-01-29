@@ -6,19 +6,12 @@ const BiographyPage = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* button */}
-      {/* <button 
-        onClick={() => navigate('/')}
-        className="fixed top-4 left-4 px-4 py-2 bg-black text-white rounded-md hover:bg-gray-800 transition-colors"
-      >
-        Back
-      </button> */}
+     
       <Biography
         mainImage= "/sir.jpg"
         secondaryImage="/don3.webp"
-        biography={`Formforge, founded in 2016 by visionary architect Abhinav Goyal, is a trailblazing studio dedicated to the confluence of art, design, and engineering.\n 
-At the heart of Formforge’s ethos lies an unwavering commitment to transforming imagination into tangible realities. \n 
-With expertise in bespoke metal craftsmanship and complex technical fabrication, the studio’s creations transcend traditional boundaries, embodying a union of advanced technology and timeless artistry.\n 
+        biography={`Formforge, founded in 2016 by visionary architect Abhinav Goyal, is a trailblazing studio dedicated to the confluence of art, design, and engineering.
+At the heart of Formforge’s ethos lies an unwavering commitment to transforming imagination into tangible realities. With expertise in bespoke metal craftsmanship and complex technical fabrication, the studio’s creations transcend traditional boundaries, embodying a union of advanced technology and timeless artistry.\n 
 Abhinav Goyal, the pioneering force behind Formforge, brings a rich architectural background and an unyielding passion for exploring the intersection of art and engineering.\n 
 A graduate in architecture, Goyal honed his skills through years of industry experience before embarking on his entrepreneurial journey. \n 
 Guided by a vision to redefine design, he has consistently pushed the boundaries of what is possible, creating works that reflect both artistic symbolism and technical mastery. \n 

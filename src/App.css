@@ -80,7 +80,7 @@ p {
   border-radius: 0.5rem; /* Consistent border radius */
 }
 
-.studio-pic{
+.studio-pic{        
   display: block;
     object-fit: cover;
     width: 50%;
