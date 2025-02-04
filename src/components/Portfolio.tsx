@@ -73,7 +73,7 @@ const Portfolio = () => {
           {images.map((image, index) => (
             <div
               key={index}
-              className="relative group fade-in w-full h-auto overflow-hidden"
+              className="relative group  w-full h-auto overflow-hidden"
               onClick={() => openImage(index)} // Attach onClick to the parent div
             >
               <div className="overflow-hidden shadow-lg relative cursor-pointer">

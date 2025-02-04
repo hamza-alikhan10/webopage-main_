@@ -7,7 +7,7 @@ const BiographyPage = () => {
   return (
     <div className="min-h-screen bg-white">
       <Biography
-        mainImage="/sir.jpg"
+        mainImage="/35.png"
         secondaryImage="/don3.webp"
         biography={`FormForge is about exploring how design, technology, and craftsmanship come together in unexpected ways. It started as a pursuit of pushing material boundaries—experimenting with metal, understanding its possibilities, and finding innovative ways to shape it into functional and artistic forms. Over time, the journey has been about problem-solving, refining digital fabrication techniques, and constantly challenging conventional approaches to design. Every piece is an exploration of structure, balance, and expression, where technology isn’t just a tool but an enabler of creativity. The process is always evolving, driven by curiosity and the desire to create work that feels both timeless and forward-thinking.`}
         artistStory={`Abhinav Goyal, Founder and Creative Director of FormForge, is a visionary designer and contemporary artist whose creations seamlessly blend art, technology, and craftsmanship. With a foundation in architecture and interior design, he specializes in bespoke sculptures and artistic furniture that balance functionality with a profound sense of storytelling.

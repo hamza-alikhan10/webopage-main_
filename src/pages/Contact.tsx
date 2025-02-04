@@ -79,7 +79,7 @@ const Contact = () => {
         </div>
 
         {/* Contact Info */}
-        <div className="bg-[#F5F5F5] border border-[#FDE1D3] px-[9%] py-[9%]">
+        <div className="bg-[#F5F5F5] border border-[#FDE1D3] px-[9%] py-[9%] mt-5">
           <h3 className="text-xl mb-8 font-montserrat text-center">Luxury is just a phone call away!</h3>
           <div className="grid gap-8 md:grid-cols-2">
             {/* Contact Info */}
@@ -117,7 +117,7 @@ const Contact = () => {
       </div>
 
       {/* Hero Image */}
-      <div className="container mx-auto mt-8 px-[9%]">
+      <div className="container mx-auto mt-5 ">
         <img
           src="./DON5.jpg"
           alt="Studio"
