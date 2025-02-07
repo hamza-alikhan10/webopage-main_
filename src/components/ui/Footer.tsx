@@ -26,40 +26,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-transparent py-8">
-      <style>
-        {`
-          .footer-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 20px; /* Consistent spacing between icons */
-            padding: 0 1rem;
-          }
-
-          .footer-icon {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 40px; /* Fixed size for all devices */
-            height: 40px;
-            background-color: black;
-            border-radius: 20%;
-            color: white;
-            font-size: 1rem;
-            transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
-            cursor: pointer;
-          }
-
-          .footer-icon:hover {
-            transform: scale(1.1); /* Slight zoom effect */
-            background-color: rgb(86, 84, 81);
-            color: white;
-          }
-        `}
-      </style>
-
-      <div className="footer-container">
+      <div className="flex justify-center items-center flex-wrap md:space-x-4 space-x-2 px-4">
         {socialLinks.map(({ icon: Icon, href, label }) => (
           <a
             key={label}
@@ -67,7 +34,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={label}
-            className="footer-icon"
+            className="flex justify-center items-center w-10 h-10 bg-black rounded-[20%] text-white text-base transition ease-in-out duration-300 cursor-pointer hover:scale-110 hover:bg-[rgb(86,84,81)]"
           >
             <Icon />
           </a>

@@ -92,12 +92,12 @@ import {
                 className="block transition-transform hover:scale-105"
               >
                 <Card className="aspect-square flex items-center justify-center p-0 m-0 border-none">
-  <img
-    src={pub.logo}
-    alt={`${pub.name} logo`}
-    className="w-full h-full object-contain"
-  />
-</Card>
+                  <img
+                    src={pub.logo}
+                    alt={`${pub.name} logo`}
+                    className="w-full h-full object-contain"
+                  />
+                </Card>
 
 
               </a>

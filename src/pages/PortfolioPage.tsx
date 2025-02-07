@@ -2,7 +2,7 @@ import Portfolio from "@/components/Portfolio";
 import { useNavigate } from "react-router-dom";
 
 
-const PortfolioPage = () => {
+const Gallery = () => {
   const navigate = useNavigate();
 
   return (
@@ -12,4 +12,4 @@ const PortfolioPage = () => {
   );
 };
 
-export default PortfolioPage;
+export default Gallery;

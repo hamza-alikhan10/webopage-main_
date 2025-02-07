@@ -40,15 +40,16 @@ const Contact = () => {
       <Navbar />
 
       {/* Contact Section */}
-      <div className="container mx-auto px-4  ">
+      <div className="container mx-auto  ">
         {/* Contact Form */}
-        <div className="bg-[#F5F5F5] border border-[#FDE1D3] px-[9%] py-[9%]">
-          <h3 className="text-xl mb-10  font-montserrat text-center">Connect with us to get started!</h3>
-          <form onSubmit={handleSubmit} className="flex flex-col gap-6 max-w-3xl mx-auto">
+        <div className="bg-[#F5F5F5] border border-[#FDE1D3] md:p-16 sm:p-10 py-8 px-5">
+          <h3 className="sm:text-xl sm:font-semibold text-lg mb-10   text-center">Connect with us to get started!</h3>
+          <form onSubmit={handleSubmit} className="flex flex-col space-y-2 md:space-y-6 max-w-3xl mx-auto">
             <Input
               type="text"
               name="firstName"
               placeholder="Name"
+              className="placeholder:text-sm sm:placeholder:text-[15px]"
               value={formData.firstName}
               onChange={handleChange}
               required
@@ -57,6 +58,7 @@ const Contact = () => {
               type="email"
               name="email"
               placeholder="Email Address"
+              className="placeholder:text-sm sm:placeholder:text-[15px]"
               value={formData.email}
               onChange={handleChange}
               required
@@ -67,11 +69,11 @@ const Contact = () => {
               value={formData.message}
               onChange={handleChange}
               required
-              className="resize-none"
+              className="resize-none pb-10"
             />
             <Button
               type="submit"
-              className="bg-black text-white hover:bg-gray-800 px-8 py-2 mx-auto"
+              className="bg-black text-white hover:bg-gray-800 px-8 mx-auto"
             >
               SUBMIT
             </Button>
@@ -80,27 +82,27 @@ const Contact = () => {
 
         {/* Contact Info */}
         <div className="bg-[#F5F5F5] border border-[#FDE1D3] px-[9%] py-[9%] mt-5">
-          <h3 className="text-xl mb-8 font-montserrat text-center">Luxury is just a phone call away!</h3>
+          <h3 className="sm:text-xl sm:font-semibold text-lg mb-8  text-left justify-center ml-3 sm:ml-0">Luxury is just a phone call away!</h3>
           <div className="grid gap-8 md:grid-cols-2">
             {/* Contact Info */}
             <div className="space-y-6">
-              <div className="flex gap-3 items-center hover:text-gray-600">
+              <div className="flex space-x-2 items-center hover:text-gray-600">
                 <Phone className="w-6 h-6" />
-                <span className="text-lg">+91 987 654 3210</span>
+                <span className="sm:text-lg text-base">+91 987 654 3210</span>
               </div>
               <button
                 onClick={handleWhatsAppClick}
-                className="flex gap-3 items-center hover:text-gray-600"
+                className="flex space-x-2 bg-gray-100 items-center hover:text-gray-600"
               >
                 <MessageCircle className="w-6 h-6 text-green-600" />
-                <span className="text-lg">+91 987 654 3210</span>
+                <span className="sm:text-lg text-base">+91 987 654 3210</span>
               </button>
               <button
                 onClick={handleMapClick}
-                className="flex gap-3 items-center hover:text-gray-600 text-left"
+                className="flex space-x-2 items-center bg-gray-100 hover:text-gray-600 text-left"
               >
                 <MapPin className="w-6 h-6" />
-                <span className="text-lg">
+                <span className="sm:text-lg text-base">
                   Block A, Sector 43,<br />Noida, Uttar Pradesh 201303
                 </span>
               </button>
@@ -117,7 +119,7 @@ const Contact = () => {
       </div>
 
       {/* Hero Image */}
-      <div className="container mx-auto mt-5 ">
+      <div className="container mt-5 ">
         <img
           src="./DON5.jpg"
           alt="Studio"

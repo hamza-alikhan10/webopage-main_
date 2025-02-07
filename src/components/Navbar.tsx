@@ -5,9 +5,9 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   const navLinks = [
-    { name: "GALLERY", href: "/portfolio" },
-    { name: "ABOUT", href: "/biography" },
-    { name: "PRESS", href: "/Press" },
+    { name: "GALLERY", href: "/gallery" },
+    { name: "ABOUT", href: "/about" },
+    { name: "PRESS", href: "/press" },
     { name: "CONTACT", href: "/contact" },
   ];
 
@@ -21,12 +21,12 @@ const Navbar = () => {
 
   return (
     <div>
-      <nav className="bg-transparent py-4">
+      <nav className="bg-transparent">
         <div className="max-w-7xl mx-auto px-4 flex flex-col items-center">
           {/* Logo */}
           <a
             href="/"
-            className="text-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light uppercase"
+            className="text-center font-ligt text-4xl sm:text-4xl md:text-4xl lg:text-7xl"
             style={{
               fontFamily: '"Poppins", "Montserrat"',
               textDecorationLine: "none",
@@ -38,12 +38,12 @@ const Navbar = () => {
           </a>
 
           {/* Navigation */}
-          <div className="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8 mt-4 mb-8 sm:mb-11">
+          <div className="flex flex-wrap justify-center space-x-3 sm:space-x-4 md:space-x-6 mt-4 mb-8 sm:mb-11">
             {navLinks.map((link) => (
               <button
                 key={link.name}
                 onClick={() => handleNavigation(link.href)}
-                className="nav-link text-gray-500 hover:text-black text-base sm:text-lg md:text-xl tracking-wide transition-colors duration-300"
+                className="nav-link text-gray-500 bg-white hover:text-black text-base sm:text-lg md:text-xl tracking-wide transition-colors duration-300"
               >
                 {link.name}
               </button>
